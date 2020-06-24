@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="Stylesheet" href="style.css">
+  <script src="script.js" defer></script>
   <title>Frontend Mentor | Intro component with sign up form</title>
 
   
@@ -23,15 +24,15 @@
     </div>
     <div class="form">
       <form>
-        <input name="first name" type="text" placeholder="First Name " required>
-        <input name="last name" type="text" placeholder="Last Name" required>
-        <input name="email" type="email" placeholder="Email Address" required>
-        <input name="password" type="password" placeholder="Password" required>
+        <input name="first name" type="text" placeholder="First Name " required oninvalid="this.setCustomValidity('First Name cannot be empty')" oninput="this.setCustomValidity('')">
+        <input name="last name" type="text" placeholder="Last Name" required oninvalid="this.setCustomValidity('Last Name cannot be empty')" oninput="this.setCustomValidity('')">
+        <input id="email" name="email" type="email" placeholder="Email Address" required oninvalid="this.setCustomValidity('Looks like this is not an email')" oninput="this.setCustomValidity('')">
+        <input name="password" type="password" placeholder="Password" required oninvalid="this.setCustomValidity('Password cannot be empty')" oninput="this.setCustomValidity('')">
         <button type="submit" value="submit">Claim your free trial</button>
       </form>
       <p>By clicking the button, you are agreeing to our <em>Terms and Services</em></p>
     </div>
   </div>
-  
+
 </body>
 </html>
